@@ -37,6 +37,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<ITaskEntityRepository, TaskEntityRepository>();
         services.AddScoped<ITitleRepository, TitleRepository>();
         services.AddScoped<IUserAddressRepository, UserAddressRepository>();
+        services.AddScoped<IUserEmailRepository, UserEmailRepository>();
         return services;
     }
 }

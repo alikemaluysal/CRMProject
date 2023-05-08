@@ -33,6 +33,7 @@ public class BaseDbContext : DbContext
     public DbSet<TaskEntity> TaskEntities { get; set; }
     public DbSet<Title> Titles { get; set; }
     public DbSet<UserAddress> UserAddresses { get; set; }
+    public DbSet<UserEmail> UserEmails { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

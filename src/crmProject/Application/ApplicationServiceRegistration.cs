@@ -33,6 +33,7 @@ using Application.Services.StatusTypes;
 using Application.Services.TaskEntities;
 using Application.Services.Titles;
 using Application.Services.UserAddresses;
+using Application.Services.UserEmails;
 
 namespace Application;
 
@@ -81,6 +82,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<ITaskEntitiesService, TaskEntitiesManager>();
         services.AddScoped<ITitlesService, TitlesManager>();
         services.AddScoped<IUserAddressesService, UserAddressesManager>();
+        services.AddScoped<IUserEmailsService, UserEmailsManager>();
         return services;
     }
 
