@@ -27,12 +27,12 @@ public class DeleteRequestCommand : IRequest<DeletedRequestResponse>
 
         public async Task<DeletedRequestResponse> Handle(DeleteRequestCommand request, CancellationToken cancellationToken)
         {
-            Request? request = await _requestRepository.GetAsync(r => r.Id == request.Id, cancellationToken: cancellationToken);
-            await _requestBusinessRules.RequestShouldExistWhenSelected(request);
+            Request? requestToDelete = await _requestRepository.GetAsync(r => r.Id == request.Id, cancellationToken: cancellationToken);
+            await _requestBusinessRules.RequestShouldExistWhenSelected(requestToDelete);
 
-            await _requestRepository.DeleteAsync(request!);
+            await _requestRepository.DeleteAsync(requestToDelete!);
 
-            DeletedRequestResponse response = _mapper.Map<DeletedRequestResponse>(request);
+            DeletedRequestResponse response = _mapper.Map<DeletedRequestResponse>(requestToDelete);
             return response;
         }
     }

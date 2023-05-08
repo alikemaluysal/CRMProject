@@ -25,10 +25,10 @@ public class GetByIdRequestQuery : IRequest<GetByIdRequestResponse>
 
         public async Task<GetByIdRequestResponse> Handle(GetByIdRequestQuery request, CancellationToken cancellationToken)
         {
-            Request? request = await _requestRepository.GetAsync(predicate: r => r.Id == request.Id, cancellationToken: cancellationToken);
-            await _requestBusinessRules.RequestShouldExistWhenSelected(request);
+            Request? requestEntity = await _requestRepository.GetAsync(predicate: r => r.Id == request.Id, cancellationToken: cancellationToken);
+            await _requestBusinessRules.RequestShouldExistWhenSelected(requestEntity);
 
-            GetByIdRequestResponse response = _mapper.Map<GetByIdRequestResponse>(request);
+            GetByIdRequestResponse response = _mapper.Map<GetByIdRequestResponse>(requestEntity);
             return response;
         }
     }

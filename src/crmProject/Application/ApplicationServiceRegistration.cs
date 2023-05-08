@@ -23,10 +23,10 @@ using Application.Services.Employees;
 using Application.Services.Genders;
 using Application.Services.Notifications;
 using Application.Services.Offers;
-using Application.Services.OfferStatus;
+using Application.Services.OfferStatuses;
 using Application.Services.Regions;
 using Application.Services.Requests;
-using Application.Services.RequestStatus;
+using Application.Services.RequestStatuses;
 
 namespace Application;
 

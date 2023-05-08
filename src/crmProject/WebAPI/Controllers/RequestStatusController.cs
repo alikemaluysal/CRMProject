@@ -1,8 +1,8 @@
-using Application.Features.RequestStatus.Commands.Create;
-using Application.Features.RequestStatus.Commands.Delete;
-using Application.Features.RequestStatus.Commands.Update;
-using Application.Features.RequestStatus.Queries.GetById;
-using Application.Features.RequestStatus.Queries.GetList;
+using Application.Features.RequestStatuses.Commands.Create;
+using Application.Features.RequestStatuses.Commands.Delete;
+using Application.Features.RequestStatuses.Commands.Update;
+using Application.Features.RequestStatuses.Queries.GetById;
+using Application.Features.RequestStatuses.Queries.GetList;
 using Core.Application.Requests;
 using Core.Application.Responses;
 using Microsoft.AspNetCore.Mvc;

@@ -30,13 +30,13 @@ public class UpdateRequestCommand : IRequest<UpdatedRequestResponse>
 
         public async Task<UpdatedRequestResponse> Handle(UpdateRequestCommand request, CancellationToken cancellationToken)
         {
-            Request? request = await _requestRepository.GetAsync(r => r.Id == request.Id, cancellationToken: cancellationToken);
-            await _requestBusinessRules.RequestShouldExistWhenSelected(request);
-            request = _mapper.Map(request, request);
+            Request? requestToUpdate = await _requestRepository.GetAsync(r => r.Id == request.Id, cancellationToken: cancellationToken);
+            await _requestBusinessRules.RequestShouldExistWhenSelected(requestToUpdate);
+            requestToUpdate = _mapper.Map(request, requestToUpdate);
 
-            await _requestRepository.UpdateAsync(request);
+            await _requestRepository.UpdateAsync(requestToUpdate);
 
-            UpdatedRequestResponse response = _mapper.Map<UpdatedRequestResponse>(request);
+            UpdatedRequestResponse response = _mapper.Map<UpdatedRequestResponse>(requestToUpdate);
             return response;
         }
     }

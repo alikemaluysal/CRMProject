@@ -29,11 +29,11 @@ public class CreateRequestCommand : IRequest<CreatedRequestResponse>
 
         public async Task<CreatedRequestResponse> Handle(CreateRequestCommand request, CancellationToken cancellationToken)
         {
-            Request request = _mapper.Map<Request>(request);
+            Request mappedRequest = _mapper.Map<Request>(request);
 
-            await _requestRepository.AddAsync(request);
+            await _requestRepository.AddAsync(mappedRequest);
 
-            CreatedRequestResponse response = _mapper.Map<CreatedRequestResponse>(request);
+            CreatedRequestResponse response = _mapper.Map<CreatedRequestResponse>(mappedRequest);
             return response;
         }
     }

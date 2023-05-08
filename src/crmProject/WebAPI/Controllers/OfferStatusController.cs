@@ -1,8 +1,8 @@
-using Application.Features.OfferStatus.Commands.Create;
-using Application.Features.OfferStatus.Commands.Delete;
-using Application.Features.OfferStatus.Commands.Update;
-using Application.Features.OfferStatus.Queries.GetById;
-using Application.Features.OfferStatus.Queries.GetList;
+using Application.Features.OfferStatuses.Commands.Create;
+using Application.Features.OfferStatuses.Commands.Delete;
+using Application.Features.OfferStatuses.Commands.Update;
+using Application.Features.OfferStatuses.Queries.GetById;
+using Application.Features.OfferStatuses.Queries.GetList;
 using Core.Application.Requests;
 using Core.Application.Responses;
 using Microsoft.AspNetCore.Mvc;
