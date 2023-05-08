@@ -21,6 +21,7 @@ public class BaseDbContext : DbContext
     public DbSet<DocumentType> DocumentTypes { get; set; }
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Gender> Genders { get; set; }
+    public DbSet<Notification> Notifications { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)
