@@ -24,6 +24,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IDocumentRepository, DocumentRepository>();
         services.AddScoped<IDocumentTypeRepository, DocumentTypeRepository>();
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+        services.AddScoped<IGenderRepository, GenderRepository>();
         return services;
     }
 }

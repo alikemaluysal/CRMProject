@@ -103,6 +103,20 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
         
         #endregion
         
+        
+        #region Genders
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Genders.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Genders.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Genders.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Genders.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Genders.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Genders.Delete" });
+        
+        #endregion
+        
         return seeds;
     }
 }
