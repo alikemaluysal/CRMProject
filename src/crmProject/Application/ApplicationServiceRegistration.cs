@@ -24,6 +24,7 @@ using Application.Services.Genders;
 using Application.Services.Notifications;
 using Application.Services.Offers;
 using Application.Services.OfferStatus;
+using Application.Services.Regions;
 
 namespace Application;
 
@@ -63,6 +64,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<INotificationsService, NotificationsManager>();
         services.AddScoped<IOffersService, OffersManager>();
         services.AddScoped<IOfferStatusService, OfferStatusManager>();
+        services.AddScoped<IRegionsService, RegionsManager>();
         return services;
     }
 

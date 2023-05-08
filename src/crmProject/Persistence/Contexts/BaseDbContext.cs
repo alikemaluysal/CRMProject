@@ -24,6 +24,7 @@ public class BaseDbContext : DbContext
     public DbSet<Notification> Notifications { get; set; }
     public DbSet<Offer> Offers { get; set; }
     public DbSet<OfferStatus> OfferStatus { get; set; }
+    public DbSet<Region> Regions { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

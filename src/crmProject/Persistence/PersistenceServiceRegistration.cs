@@ -28,6 +28,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<INotificationRepository, NotificationRepository>();
         services.AddScoped<IOfferRepository, OfferRepository>();
         services.AddScoped<IOfferStatusRepository, OfferStatusRepository>();
+        services.AddScoped<IRegionRepository, RegionRepository>();
         return services;
     }
 }
