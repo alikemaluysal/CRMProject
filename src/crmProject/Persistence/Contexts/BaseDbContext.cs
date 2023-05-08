@@ -18,6 +18,7 @@ public class BaseDbContext : DbContext
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Department> Departments { get; set; }
     public DbSet<Document> Documents { get; set; }
+    public DbSet<DocumentType> DocumentTypes { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)
