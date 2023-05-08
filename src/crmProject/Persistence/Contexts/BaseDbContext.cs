@@ -22,6 +22,7 @@ public class BaseDbContext : DbContext
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Gender> Genders { get; set; }
     public DbSet<Notification> Notifications { get; set; }
+    public DbSet<Offer> Offers { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

@@ -131,6 +131,20 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
         
         #endregion
         
+        
+        #region Offers
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Offers.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Offers.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Offers.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Offers.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Offers.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "Offers.Delete" });
+        
+        #endregion
+        
         return seeds;
     }
 }
