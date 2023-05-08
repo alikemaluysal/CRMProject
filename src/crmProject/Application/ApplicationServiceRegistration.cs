@@ -35,6 +35,7 @@ using Application.Services.Titles;
 using Application.Services.UserAddresses;
 using Application.Services.UserEmails;
 using Application.Services.UserPhones;
+using Application.Services.TaskStatuses;
 
 namespace Application;
 
@@ -85,6 +86,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IUserAddressesService, UserAddressesManager>();
         services.AddScoped<IUserEmailsService, UserEmailsManager>();
         services.AddScoped<IUserPhonesService, UserPhonesManager>();
+        services.AddScoped<ITaskStatusService, TaskStatusManager>();
         return services;
     }
 

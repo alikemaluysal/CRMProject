@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Reflection;
 using Domain.Entities;
+using TaskStatus = Domain.Entities.TaskStatus;
 
 namespace Persistence.Contexts;
 
@@ -35,6 +36,7 @@ public class BaseDbContext : DbContext
     public DbSet<UserAddress> UserAddresses { get; set; }
     public DbSet<UserEmail> UserEmails { get; set; }
     public DbSet<UserPhone> UserPhones { get; set; }
+    public DbSet<TaskStatus> TaskStatus { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)
