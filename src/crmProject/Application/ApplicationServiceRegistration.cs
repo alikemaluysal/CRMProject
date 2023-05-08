@@ -27,6 +27,7 @@ using Application.Services.OfferStatuses;
 using Application.Services.Regions;
 using Application.Services.Requests;
 using Application.Services.RequestStatuses;
+using Application.Services.Sales;
 
 namespace Application;
 
@@ -69,6 +70,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IRegionsService, RegionsManager>();
         services.AddScoped<IRequestsService, RequestsManager>();
         services.AddScoped<IRequestStatusService, RequestStatusManager>();
+        services.AddScoped<ISalesService, SalesManager>();
         return services;
     }
 

@@ -27,6 +27,7 @@ public class BaseDbContext : DbContext
     public DbSet<Region> Regions { get; set; }
     public DbSet<Request> Requests { get; set; }
     public DbSet<RequestStatus> RequestStatus { get; set; }
+    public DbSet<Sale> Sales { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)
