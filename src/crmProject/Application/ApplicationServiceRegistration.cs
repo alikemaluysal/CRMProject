@@ -25,6 +25,7 @@ using Application.Services.Notifications;
 using Application.Services.Offers;
 using Application.Services.OfferStatus;
 using Application.Services.Regions;
+using Application.Services.Requests;
 
 namespace Application;
 
@@ -65,6 +66,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IOffersService, OffersManager>();
         services.AddScoped<IOfferStatusService, OfferStatusManager>();
         services.AddScoped<IRegionsService, RegionsManager>();
+        services.AddScoped<IRequestsService, RequestsManager>();
         return services;
     }
 
