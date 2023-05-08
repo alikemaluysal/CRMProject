@@ -2,7 +2,7 @@
 
 namespace Domain.Entities;
 
-public class Task : Entity<Guid>
+public class TaskEntity : Entity<Guid>
 {
     public int RequestId { get; set; }
     public int EmployeeUserId { get; set; }

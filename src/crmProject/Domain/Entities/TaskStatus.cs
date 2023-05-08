@@ -6,5 +6,5 @@ public class TaskStatus : Entity<Guid>
 {
     public string? Name { get; set; }
 
-    public virtual List<Task>? Tasks { get; set; }
+    public virtual List<TaskEntity>? Tasks { get; set; }
 }
