@@ -243,6 +243,20 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
         
         #endregion
         
+        
+        #region TaskEntities
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TaskEntities.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TaskEntities.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TaskEntities.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TaskEntities.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TaskEntities.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "TaskEntities.Delete" });
+        
+        #endregion
+        
         return seeds;
     }
 }

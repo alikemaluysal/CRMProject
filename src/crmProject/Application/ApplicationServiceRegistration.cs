@@ -30,6 +30,7 @@ using Application.Services.RequestStatuses;
 using Application.Services.Sales;
 using Application.Services.Settings;
 using Application.Services.StatusTypes;
+using Application.Services.TaskEntities;
 
 namespace Application;
 
@@ -75,6 +76,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<ISalesService, SalesManager>();
         services.AddScoped<ISettingsService, SettingsManager>();
         services.AddScoped<IStatusTypesService, StatusTypesManager>();
+        services.AddScoped<ITaskEntitiesService, TaskEntitiesManager>();
         return services;
     }
 
