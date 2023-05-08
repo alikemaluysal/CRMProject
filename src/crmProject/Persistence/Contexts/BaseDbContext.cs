@@ -19,6 +19,7 @@ public class BaseDbContext : DbContext
     public DbSet<Department> Departments { get; set; }
     public DbSet<Document> Documents { get; set; }
     public DbSet<DocumentType> DocumentTypes { get; set; }
+    public DbSet<Employee> Employees { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

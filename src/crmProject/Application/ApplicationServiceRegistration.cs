@@ -19,6 +19,7 @@ using Application.Services.Customers;
 using Application.Services.Departments;
 using Application.Services.Documents;
 using Application.Services.DocumentTypes;
+using Application.Services.Employees;
 
 namespace Application;
 
@@ -53,6 +54,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IDepartmentsService, DepartmentsManager>();
         services.AddScoped<IDocumentsService, DocumentsManager>();
         services.AddScoped<IDocumentTypesService, DocumentTypesManager>();
+        services.AddScoped<IEmployeesService, EmployeesManager>();
         return services;
     }
 
