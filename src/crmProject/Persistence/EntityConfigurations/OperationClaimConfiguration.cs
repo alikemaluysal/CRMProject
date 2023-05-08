@@ -299,6 +299,20 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
         
         #endregion
         
+        
+        #region UserPhones
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "UserPhones.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "UserPhones.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "UserPhones.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "UserPhones.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "UserPhones.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "UserPhones.Delete" });
+        
+        #endregion
+        
         return seeds;
     }
 }
