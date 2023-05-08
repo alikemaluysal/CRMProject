@@ -37,6 +37,7 @@ public class BaseDbContext : DbContext
     public DbSet<UserEmail> UserEmails { get; set; }
     public DbSet<UserPhone> UserPhones { get; set; }
     public DbSet<TaskStatus> TaskStatus { get; set; }
+    public DbSet<UserStatus> UserStatus { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

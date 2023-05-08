@@ -40,6 +40,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IUserEmailRepository, UserEmailRepository>();
         services.AddScoped<IUserPhoneRepository, UserPhoneRepository>();
         services.AddScoped<ITaskStatusRepository, TaskStatusRepository>();
+        services.AddScoped<IUserStatusRepository, UserStatusRepository>();
         return services;
     }
 }
