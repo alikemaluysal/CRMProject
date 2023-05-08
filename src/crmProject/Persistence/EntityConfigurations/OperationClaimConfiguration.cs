@@ -187,6 +187,20 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
         
         #endregion
         
+        
+        #region RequestStatus
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "RequestStatus.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "RequestStatus.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "RequestStatus.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "RequestStatus.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "RequestStatus.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "RequestStatus.Delete" });
+        
+        #endregion
+        
         return seeds;
     }
 }

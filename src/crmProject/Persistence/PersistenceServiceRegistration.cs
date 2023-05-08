@@ -30,6 +30,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IOfferStatusRepository, OfferStatusRepository>();
         services.AddScoped<IRegionRepository, RegionRepository>();
         services.AddScoped<IRequestRepository, RequestRepository>();
+        services.AddScoped<IRequestStatusRepository, RequestStatusRepository>();
         return services;
     }
 }

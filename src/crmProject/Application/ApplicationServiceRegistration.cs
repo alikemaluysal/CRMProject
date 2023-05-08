@@ -26,6 +26,7 @@ using Application.Services.Offers;
 using Application.Services.OfferStatus;
 using Application.Services.Regions;
 using Application.Services.Requests;
+using Application.Services.RequestStatus;
 
 namespace Application;
 
@@ -67,6 +68,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IOfferStatusService, OfferStatusManager>();
         services.AddScoped<IRegionsService, RegionsManager>();
         services.AddScoped<IRequestsService, RequestsManager>();
+        services.AddScoped<IRequestStatusService, RequestStatusManager>();
         return services;
     }
 
