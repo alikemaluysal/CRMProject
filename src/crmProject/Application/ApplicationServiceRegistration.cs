@@ -23,6 +23,7 @@ using Application.Services.Employees;
 using Application.Services.Genders;
 using Application.Services.Notifications;
 using Application.Services.Offers;
+using Application.Services.OfferStatus;
 
 namespace Application;
 
@@ -61,6 +62,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IGendersService, GendersManager>();
         services.AddScoped<INotificationsService, NotificationsManager>();
         services.AddScoped<IOffersService, OffersManager>();
+        services.AddScoped<IOfferStatusService, OfferStatusManager>();
         return services;
     }
 
