@@ -32,6 +32,7 @@ public class BaseDbContext : DbContext
     public DbSet<StatusType> StatusTypes { get; set; }
     public DbSet<TaskEntity> TaskEntities { get; set; }
     public DbSet<Title> Titles { get; set; }
+    public DbSet<UserAddress> UserAddresses { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

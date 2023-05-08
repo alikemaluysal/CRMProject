@@ -32,6 +32,7 @@ using Application.Services.Settings;
 using Application.Services.StatusTypes;
 using Application.Services.TaskEntities;
 using Application.Services.Titles;
+using Application.Services.UserAddresses;
 
 namespace Application;
 
@@ -79,6 +80,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IStatusTypesService, StatusTypesManager>();
         services.AddScoped<ITaskEntitiesService, TaskEntitiesManager>();
         services.AddScoped<ITitlesService, TitlesManager>();
+        services.AddScoped<IUserAddressesService, UserAddressesManager>();
         return services;
     }
 
