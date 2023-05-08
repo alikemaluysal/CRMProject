@@ -31,6 +31,7 @@ public class BaseDbContext : DbContext
     public DbSet<Setting> Settings { get; set; }
     public DbSet<StatusType> StatusTypes { get; set; }
     public DbSet<TaskEntity> TaskEntities { get; set; }
+    public DbSet<Title> Titles { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)
