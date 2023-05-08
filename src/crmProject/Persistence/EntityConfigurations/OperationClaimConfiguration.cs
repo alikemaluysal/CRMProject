@@ -229,6 +229,20 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
         
         #endregion
         
+        
+        #region StatusTypes
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "StatusTypes.Admin" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "StatusTypes.Read" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "StatusTypes.Write" });
+        
+        seeds.Add(new OperationClaim { Id = ++id, Name = "StatusTypes.Add" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "StatusTypes.Update" });
+        seeds.Add(new OperationClaim { Id = ++id, Name = "StatusTypes.Delete" });
+        
+        #endregion
+        
         return seeds;
     }
 }

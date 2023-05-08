@@ -33,6 +33,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IRequestStatusRepository, RequestStatusRepository>();
         services.AddScoped<ISaleRepository, SaleRepository>();
         services.AddScoped<ISettingRepository, SettingRepository>();
+        services.AddScoped<IStatusTypeRepository, StatusTypeRepository>();
         return services;
     }
 }

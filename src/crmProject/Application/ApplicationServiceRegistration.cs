@@ -29,6 +29,7 @@ using Application.Services.Requests;
 using Application.Services.RequestStatuses;
 using Application.Services.Sales;
 using Application.Services.Settings;
+using Application.Services.StatusTypes;
 
 namespace Application;
 
@@ -73,6 +74,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IRequestStatusService, RequestStatusManager>();
         services.AddScoped<ISalesService, SalesManager>();
         services.AddScoped<ISettingsService, SettingsManager>();
+        services.AddScoped<IStatusTypesService, StatusTypesManager>();
         return services;
     }
 
