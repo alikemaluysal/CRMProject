@@ -8,7 +8,7 @@ namespace Application.Features.DocumentTypes.Commands.Update;
 
 public class UpdateDocumentTypeCommand : IRequest<UpdatedDocumentTypeResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string? Name { get; set; }
 
     public class UpdateDocumentTypeCommandHandler : IRequestHandler<UpdateDocumentTypeCommand, UpdatedDocumentTypeResponse>

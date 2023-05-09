@@ -4,5 +4,5 @@ namespace Application.Features.Customers.Commands.Delete;
 
 public class DeletedCustomerResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 }

@@ -9,7 +9,7 @@ namespace Application.Features.Regions.Commands.Delete;
 
 public class DeleteRegionCommand : IRequest<DeletedRegionResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteRegionCommandHandler : IRequestHandler<DeleteRegionCommand, DeletedRegionResponse>
     {

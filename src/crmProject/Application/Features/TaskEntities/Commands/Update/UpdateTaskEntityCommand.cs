@@ -8,7 +8,7 @@ namespace Application.Features.TaskEntities.Commands.Update;
 
 public class UpdateTaskEntityCommand : IRequest<UpdatedTaskEntityResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int RequestId { get; set; }
     public int EmployeeUserId { get; set; }
     public DateTime TaskStartDate { get; set; }

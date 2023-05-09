@@ -11,7 +11,7 @@ public static class PersistenceServiceRegistration
 {
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<BaseDbContext>(options => options.UseInMemoryDatabase("nArchitecture"));
+        services.AddDbContext<BaseDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("CrmConnectionString")));
         services.AddScoped<IEmailAuthenticatorRepository, EmailAuthenticatorRepository>();
         services.AddScoped<IOperationClaimRepository, OperationClaimRepository>();
         services.AddScoped<IOtpAuthenticatorRepository, OtpAuthenticatorRepository>();
@@ -40,7 +40,6 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IUserEmailRepository, UserEmailRepository>();
         services.AddScoped<IUserPhoneRepository, UserPhoneRepository>();
         services.AddScoped<ITaskStatusRepository, TaskStatusRepository>();
-        services.AddScoped<IUserStatusRepository, UserStatusRepository>();
         return services;
     }
 }

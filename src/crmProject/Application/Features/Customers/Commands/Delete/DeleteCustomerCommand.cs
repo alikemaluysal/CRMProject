@@ -9,7 +9,7 @@ namespace Application.Features.Customers.Commands.Delete;
 
 public class DeleteCustomerCommand : IRequest<DeletedCustomerResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteCustomerCommandHandler : IRequestHandler<DeleteCustomerCommand, DeletedCustomerResponse>
     {

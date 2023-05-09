@@ -18,5 +18,14 @@ public class RegionConfiguration : IEntityTypeConfiguration<Region>
         builder.Property(r => r.DeletedDate).HasColumnName("DeletedDate");
 
         builder.HasQueryFilter(r => !r.DeletedDate.HasValue);
+
+        Region[] regionSeeds = new Region[]
+        {
+                new() {Id = 1, Name = "Istanbul-Avrupa" },
+                new() {Id = 2, Name = "Istanbul-Anadolu" },
+                new() {Id = 3, Name = "Ankara" }
+        };
+
+        builder.HasData(regionSeeds);
     }
 }

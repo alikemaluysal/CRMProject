@@ -8,7 +8,7 @@ namespace Application.Features.Employees.Queries.GetById;
 
 public class GetByIdEmployeeQuery : IRequest<GetByIdEmployeeResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdEmployeeQueryHandler : IRequestHandler<GetByIdEmployeeQuery, GetByIdEmployeeResponse>
     {

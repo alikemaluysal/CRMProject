@@ -3,6 +3,6 @@ using Core.Persistence.Repositories;
 
 namespace Application.Services.Repositories;
 
-public interface IOfferStatusRepository : IAsyncRepository<OfferStatus, Guid>, IRepository<OfferStatus, Guid>
+public interface IOfferStatusRepository : IAsyncRepository<OfferStatus, int>, IRepository<OfferStatus, int>
 {
 }

@@ -17,5 +17,16 @@ public class DepartmentConfiguration : IEntityTypeConfiguration<Department>
         builder.Property(d => d.DeletedDate).HasColumnName("DeletedDate");
 
         builder.HasQueryFilter(d => !d.DeletedDate.HasValue);
+
+        Department[] deparmentSeeds = new Department[] {
+
+                new() {Id = 1, Name = "Administration" },
+                new() {Id = 2, Name = "Sale" },
+                new() {Id = 3, Name = "Marketing" },
+                new() {Id = 4, Name = "Accounting" },
+                new() {Id = 5, Name = "Technical" }
+            };
+
+        builder.HasData(deparmentSeeds);
     }
 }

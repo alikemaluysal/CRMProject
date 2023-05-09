@@ -4,5 +4,5 @@ namespace Application.Features.TaskEntities.Commands.Delete;
 
 public class DeletedTaskEntityResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 }

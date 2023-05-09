@@ -4,5 +4,5 @@ namespace Application.Features.Offers.Commands.Delete;
 
 public class DeletedOfferResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 }

@@ -9,7 +9,7 @@ namespace Application.Features.TaskStatuses.Commands.Update;
 
 public class UpdateTaskStatusCommand : IRequest<UpdatedTaskStatusResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string? Name { get; set; }
 
     public class UpdateTaskStatusCommandHandler : IRequestHandler<UpdateTaskStatusCommand, UpdatedTaskStatusResponse>

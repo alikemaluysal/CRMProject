@@ -9,7 +9,7 @@ namespace Application.Features.Departments.Commands.Delete;
 
 public class DeleteDepartmentCommand : IRequest<DeletedDepartmentResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteDepartmentCommandHandler : IRequestHandler<DeleteDepartmentCommand, DeletedDepartmentResponse>
     {

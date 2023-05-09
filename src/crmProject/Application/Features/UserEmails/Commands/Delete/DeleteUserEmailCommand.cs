@@ -9,7 +9,7 @@ namespace Application.Features.UserEmails.Commands.Delete;
 
 public class DeleteUserEmailCommand : IRequest<DeletedUserEmailResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteUserEmailCommandHandler : IRequestHandler<DeleteUserEmailCommand, DeletedUserEmailResponse>
     {

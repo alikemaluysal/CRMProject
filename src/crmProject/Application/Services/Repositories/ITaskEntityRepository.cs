@@ -3,6 +3,6 @@ using Core.Persistence.Repositories;
 
 namespace Application.Services.Repositories;
 
-public interface ITaskEntityRepository : IAsyncRepository<TaskEntity, Guid>, IRepository<TaskEntity, Guid>
+public interface ITaskEntityRepository : IAsyncRepository<TaskEntity, int>, IRepository<TaskEntity, int>
 {
 }

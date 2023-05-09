@@ -22,7 +22,7 @@ public class NotificationBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task NotificationIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task NotificationIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         Notification? notification = await _notificationRepository.GetAsync(
             predicate: n => n.Id == id,

@@ -5,7 +5,7 @@ using Persistence.Contexts;
 
 namespace Persistence.Repositories;
 
-public class GenderRepository : EfRepositoryBase<Gender, Guid, BaseDbContext>, IGenderRepository
+public class GenderRepository : EfRepositoryBase<Gender, int, BaseDbContext>, IGenderRepository
 {
     public GenderRepository(BaseDbContext context) : base(context)
     {

@@ -8,7 +8,7 @@ namespace Application.Features.Requests.Commands.Update;
 
 public class UpdateRequestCommand : IRequest<UpdatedRequestResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int CustomerUserId { get; set; }
     public int EmployeeUserId { get; set; }
     public int RequestStatusId { get; set; }

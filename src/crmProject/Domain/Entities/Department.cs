@@ -3,7 +3,7 @@
 
 namespace Domain.Entities;
 
-public class Department : Entity<Guid>
+public class Department : Entity<int>
 {
     public string? Name { get; set; }
 

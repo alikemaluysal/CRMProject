@@ -4,6 +4,6 @@ namespace Application.Features.RequestStatuses.Queries.GetList;
 
 public class GetListRequestStatusListItemDto : IDto
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
 }

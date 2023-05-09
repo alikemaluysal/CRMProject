@@ -22,7 +22,7 @@ public class RequestStatusBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task RequestStatusIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task RequestStatusIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         RequestStatus? requestStatus = await _requestStatusRepository.GetAsync(
             predicate: rs => rs.Id == id,

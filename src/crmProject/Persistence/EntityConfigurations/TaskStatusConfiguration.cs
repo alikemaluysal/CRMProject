@@ -18,5 +18,17 @@ public class TaskStatusConfiguration : IEntityTypeConfiguration<TaskStatus>
         builder.Property(ts => ts.DeletedDate).HasColumnName("DeletedDate");
 
         builder.HasQueryFilter(ts => !ts.DeletedDate.HasValue);
+
+        TaskStatus[] taskStatusSeeds = new TaskStatus[]
+        {
+                new() {Id = 1, Name = "Open" },
+                new() {Id = 2, Name = "In Progress" },
+                new() {Id = 3, Name = "Resolved" },
+                new() {Id = 4, Name = "Closed" }
+        };
+
+        builder.HasData(taskStatusSeeds);
+
+
     }
 }

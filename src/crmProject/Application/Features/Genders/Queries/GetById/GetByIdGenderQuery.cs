@@ -8,7 +8,7 @@ namespace Application.Features.Genders.Queries.GetById;
 
 public class GetByIdGenderQuery : IRequest<GetByIdGenderResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdGenderQueryHandler : IRequestHandler<GetByIdGenderQuery, GetByIdGenderResponse>
     {

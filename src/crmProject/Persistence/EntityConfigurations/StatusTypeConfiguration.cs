@@ -17,5 +17,16 @@ public class StatusTypeConfiguration : IEntityTypeConfiguration<StatusType>
         builder.Property(st => st.DeletedDate).HasColumnName("DeletedDate");
 
         builder.HasQueryFilter(st => !st.DeletedDate.HasValue);
+
+        StatusType[] statusTypeSeeds = new StatusType[]
+        {
+                new() {Id = 1, Name = "Active" },
+                new() {Id = 2, Name = "Archive" },
+                new() {Id = 3, Name = "Black Listed" }
+        };
+
+        builder.HasData(statusTypeSeeds);
+
+
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Domain.Entities;
 
-public class TaskStatus : Entity<Guid>
+public class TaskStatus : Entity<int>
 {
     public string? Name { get; set; }
 

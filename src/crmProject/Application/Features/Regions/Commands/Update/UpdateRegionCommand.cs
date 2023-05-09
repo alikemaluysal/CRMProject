@@ -8,7 +8,7 @@ namespace Application.Features.Regions.Commands.Update;
 
 public class UpdateRegionCommand : IRequest<UpdatedRegionResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
     public int? ParentId { get; set; }
 

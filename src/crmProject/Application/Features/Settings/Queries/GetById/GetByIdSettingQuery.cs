@@ -8,7 +8,7 @@ namespace Application.Features.Settings.Queries.GetById;
 
 public class GetByIdSettingQuery : IRequest<GetByIdSettingResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdSettingQueryHandler : IRequestHandler<GetByIdSettingQuery, GetByIdSettingResponse>
     {

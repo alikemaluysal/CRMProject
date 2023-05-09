@@ -22,7 +22,7 @@ public class DocumentTypeBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task DocumentTypeIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task DocumentTypeIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         DocumentType? documentType = await _documentTypeRepository.GetAsync(
             predicate: dt => dt.Id == id,

@@ -9,7 +9,7 @@ namespace Application.Features.TaskEntities.Commands.Delete;
 
 public class DeleteTaskEntityCommand : IRequest<DeletedTaskEntityResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteTaskEntityCommandHandler : IRequestHandler<DeleteTaskEntityCommand, DeletedTaskEntityResponse>
     {

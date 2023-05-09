@@ -22,7 +22,7 @@ public class UserPhoneBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task UserPhoneIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task UserPhoneIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         UserPhone? userPhone = await _userPhoneRepository.GetAsync(
             predicate: up => up.Id == id,

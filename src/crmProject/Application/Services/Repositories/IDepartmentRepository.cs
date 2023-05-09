@@ -3,6 +3,6 @@ using Core.Persistence.Repositories;
 
 namespace Application.Services.Repositories;
 
-public interface IDepartmentRepository : IAsyncRepository<Department, Guid>, IRepository<Department, Guid>
+public interface IDepartmentRepository : IAsyncRepository<Department, int>, IRepository<Department, int>
 {
 }

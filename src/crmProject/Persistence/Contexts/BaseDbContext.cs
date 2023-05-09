@@ -24,10 +24,10 @@ public class BaseDbContext : DbContext
     public DbSet<Gender> Genders { get; set; }
     public DbSet<Notification> Notifications { get; set; }
     public DbSet<Offer> Offers { get; set; }
-    public DbSet<OfferStatus> OfferStatus { get; set; }
+    public DbSet<OfferStatus> OfferStatuses { get; set; }
     public DbSet<Region> Regions { get; set; }
     public DbSet<Request> Requests { get; set; }
-    public DbSet<RequestStatus> RequestStatus { get; set; }
+    public DbSet<RequestStatus> RequestStatuses { get; set; }
     public DbSet<Sale> Sales { get; set; }
     public DbSet<Setting> Settings { get; set; }
     public DbSet<StatusType> StatusTypes { get; set; }
@@ -36,8 +36,7 @@ public class BaseDbContext : DbContext
     public DbSet<UserAddress> UserAddresses { get; set; }
     public DbSet<UserEmail> UserEmails { get; set; }
     public DbSet<UserPhone> UserPhones { get; set; }
-    public DbSet<TaskStatus> TaskStatus { get; set; }
-    public DbSet<UserStatus> UserStatus { get; set; }
+    public DbSet<TaskStatus> TaskStatuses { get; set; }
 
     public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration)
         : base(dbContextOptions)

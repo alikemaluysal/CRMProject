@@ -5,7 +5,7 @@ using Persistence.Contexts;
 
 namespace Persistence.Repositories;
 
-public class RequestStatusRepository : EfRepositoryBase<RequestStatus, Guid, BaseDbContext>, IRequestStatusRepository
+public class RequestStatusRepository : EfRepositoryBase<RequestStatus, int, BaseDbContext>, IRequestStatusRepository
 {
     public RequestStatusRepository(BaseDbContext context) : base(context)
     {

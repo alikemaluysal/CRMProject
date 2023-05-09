@@ -8,7 +8,7 @@ namespace Application.Features.Titles.Commands.Update;
 
 public class UpdateTitleCommand : IRequest<UpdatedTitleResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
 
     public class UpdateTitleCommandHandler : IRequestHandler<UpdateTitleCommand, UpdatedTitleResponse>

@@ -4,5 +4,5 @@ namespace Application.Features.TaskStatuses.Commands.Delete;
 
 public class DeletedTaskStatusResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 }

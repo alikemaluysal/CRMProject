@@ -3,6 +3,6 @@ using Core.Persistence.Repositories;
 
 namespace Application.Services.Repositories;
 
-public interface IGenderRepository : IAsyncRepository<Gender, Guid>, IRepository<Gender, Guid>
+public interface IGenderRepository : IAsyncRepository<Gender, int>, IRepository<Gender, int>
 {
 }

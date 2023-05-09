@@ -10,7 +10,7 @@ namespace Application.Features.TaskStatuses.Commands.Delete;
 
 public class DeleteTaskStatusCommand : IRequest<DeletedTaskStatusResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteTaskStatusCommandHandler : IRequestHandler<DeleteTaskStatusCommand, DeletedTaskStatusResponse>
     {

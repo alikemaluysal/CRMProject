@@ -8,7 +8,7 @@ namespace Application.Features.Offers.Queries.GetById;
 
 public class GetByIdOfferQuery : IRequest<GetByIdOfferResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdOfferQueryHandler : IRequestHandler<GetByIdOfferQuery, GetByIdOfferResponse>
     {

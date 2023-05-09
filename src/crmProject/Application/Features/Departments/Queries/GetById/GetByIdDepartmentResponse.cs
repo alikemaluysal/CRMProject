@@ -4,6 +4,6 @@ namespace Application.Features.Departments.Queries.GetById;
 
 public class GetByIdDepartmentResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string? Name { get; set; }
 }

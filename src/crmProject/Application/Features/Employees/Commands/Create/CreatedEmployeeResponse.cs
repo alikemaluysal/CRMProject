@@ -4,7 +4,7 @@ namespace Application.Features.Employees.Commands.Create;
 
 public class CreatedEmployeeResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int UserId { get; set; }
     public string? IdentityNumber { get; set; }
     public int? GenderId { get; set; }

@@ -22,7 +22,7 @@ public class TitleBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task TitleIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task TitleIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         Title? title = await _titleRepository.GetAsync(
             predicate: t => t.Id == id,

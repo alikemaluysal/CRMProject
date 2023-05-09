@@ -9,7 +9,7 @@ namespace Application.Features.OfferStatuses.Commands.Delete;
 
 public class DeleteOfferStatusCommand : IRequest<DeletedOfferStatusResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteOfferStatusCommandHandler : IRequestHandler<DeleteOfferStatusCommand, DeletedOfferStatusResponse>
     {

@@ -4,5 +4,5 @@ namespace Application.Features.Titles.Commands.Delete;
 
 public class DeletedTitleResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 }

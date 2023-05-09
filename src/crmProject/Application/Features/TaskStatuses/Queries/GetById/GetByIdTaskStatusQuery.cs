@@ -9,7 +9,7 @@ namespace Application.Features.TaskStatuses.Queries.GetById;
 
 public class GetByIdTaskStatusQuery : IRequest<GetByIdTaskStatusResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdTaskStatusQueryHandler : IRequestHandler<GetByIdTaskStatusQuery, GetByIdTaskStatusResponse>
     {

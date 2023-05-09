@@ -9,7 +9,7 @@ namespace Application.Features.StatusTypes.Commands.Delete;
 
 public class DeleteStatusTypeCommand : IRequest<DeletedStatusTypeResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteStatusTypeCommandHandler : IRequestHandler<DeleteStatusTypeCommand, DeletedStatusTypeResponse>
     {

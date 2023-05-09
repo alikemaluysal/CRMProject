@@ -5,7 +5,7 @@ using Persistence.Contexts;
 
 namespace Persistence.Repositories;
 
-public class TaskEntityRepository : EfRepositoryBase<TaskEntity, Guid, BaseDbContext>, ITaskEntityRepository
+public class TaskEntityRepository : EfRepositoryBase<TaskEntity, int, BaseDbContext>, ITaskEntityRepository
 {
     public TaskEntityRepository(BaseDbContext context) : base(context)
     {

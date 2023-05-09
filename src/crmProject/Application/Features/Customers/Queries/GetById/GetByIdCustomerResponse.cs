@@ -5,7 +5,7 @@ namespace Application.Features.Customers.Queries.GetById;
 
 public class GetByIdCustomerResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int UserId { get; set; }
     public string? IdentityNumber { get; set; }
     public int? GenderId { get; set; }

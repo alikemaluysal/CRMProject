@@ -8,7 +8,7 @@ namespace Application.Features.Regions.Queries.GetById;
 
 public class GetByIdRegionQuery : IRequest<GetByIdRegionResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdRegionQueryHandler : IRequestHandler<GetByIdRegionQuery, GetByIdRegionResponse>
     {

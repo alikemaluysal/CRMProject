@@ -9,7 +9,7 @@ namespace Application.Features.Notifications.Commands.Delete;
 
 public class DeleteNotificationCommand : IRequest<DeletedNotificationResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteNotificationCommandHandler : IRequestHandler<DeleteNotificationCommand, DeletedNotificationResponse>
     {

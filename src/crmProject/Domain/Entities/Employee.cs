@@ -3,7 +3,7 @@ using Core.Security.Entities;
 
 namespace Domain.Entities;
 
-public class Employee : Entity<Guid>
+public class Employee : Entity<int>
 {
     public int UserId { get; set; }
     public string? IdentityNumber { get; set; }
@@ -17,11 +17,11 @@ public class Employee : Entity<Guid>
     public int? ParentEmployeeId { get; set; }
 
     #region Navigation Properties
-    public virtual User? UserFk { get; set; }
-    public virtual StatusType? StatusTypeFk { get; set; }
-    public virtual Gender? GenderFk { get; set; }
-    public virtual Title? TitleFk { get; set; }
-    public virtual Department? DepartmentFk { get; set; }
+    public virtual User? User { get; set; }
+    public virtual StatusType? StatusType { get; set; }
+    public virtual Gender? Gender { get; set; }
+    public virtual Title? Title { get; set; }
+    public virtual Department? Department { get; set; }
 
     #endregion
 }

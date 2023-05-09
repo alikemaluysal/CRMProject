@@ -22,7 +22,7 @@ public class UserAddressBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task UserAddressIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task UserAddressIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         UserAddress? userAddress = await _userAddressRepository.GetAsync(
             predicate: ua => ua.Id == id,

@@ -8,7 +8,7 @@ namespace Application.Features.StatusTypes.Queries.GetById;
 
 public class GetByIdStatusTypeQuery : IRequest<GetByIdStatusTypeResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdStatusTypeQueryHandler : IRequestHandler<GetByIdStatusTypeQuery, GetByIdStatusTypeResponse>
     {

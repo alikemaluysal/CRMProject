@@ -4,6 +4,6 @@ namespace Application.Features.StatusTypes.Queries.GetList;
 
 public class GetListStatusTypeListItemDto : IDto
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
 }

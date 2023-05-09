@@ -2,7 +2,7 @@
 
 namespace Domain.Entities;
 
-public class StatusType : Entity<Guid>
+public class StatusType : Entity<int>
 {
     public string Name { get; set; }
 

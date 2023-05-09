@@ -2,7 +2,7 @@
 
 namespace Domain.Entities;
 
-public class Gender : Entity<Guid>
+public class Gender : Entity<int>
 {
     public string Name { get; set; }
 }

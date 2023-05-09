@@ -8,7 +8,7 @@ namespace Application.Features.RequestStatuses.Commands.Update;
 
 public class UpdateRequestStatusCommand : IRequest<UpdatedRequestStatusResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
 
     public class UpdateRequestStatusCommandHandler : IRequestHandler<UpdateRequestStatusCommand, UpdatedRequestStatusResponse>

@@ -22,7 +22,7 @@ public class GenderBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task GenderIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task GenderIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         Gender? gender = await _genderRepository.GetAsync(
             predicate: g => g.Id == id,

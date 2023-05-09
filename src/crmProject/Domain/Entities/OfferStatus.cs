@@ -2,7 +2,7 @@
 
 namespace Domain.Entities;
 
-public class OfferStatus : Entity<Guid>
+public class OfferStatus : Entity<int>
 {
     public string Name { get; set; }
 }

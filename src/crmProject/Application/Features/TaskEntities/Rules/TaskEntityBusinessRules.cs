@@ -22,7 +22,7 @@ public class TaskEntityBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task TaskEntityIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task TaskEntityIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         TaskEntity? taskEntity = await _taskEntityRepository.GetAsync(
             predicate: te => te.Id == id,

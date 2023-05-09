@@ -4,6 +4,6 @@ namespace Application.Features.RequestStatuses.Commands.Create;
 
 public class CreatedRequestStatusResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
 }

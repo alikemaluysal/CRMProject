@@ -4,5 +4,5 @@ namespace Application.Features.Genders.Commands.Delete;
 
 public class DeletedGenderResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 }

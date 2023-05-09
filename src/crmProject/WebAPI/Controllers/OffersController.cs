@@ -30,7 +30,7 @@ public class OffersController : BaseController
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete([FromRoute] Guid id)
+    public async Task<IActionResult> Delete([FromRoute] int id)
     {
         DeletedOfferResponse response = await Mediator.Send(new DeleteOfferCommand { Id = id });
 
@@ -38,7 +38,7 @@ public class OffersController : BaseController
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetById([FromRoute] Guid id)
+    public async Task<IActionResult> GetById([FromRoute] int id)
     {
         GetByIdOfferResponse response = await Mediator.Send(new GetByIdOfferQuery { Id = id });
         return Ok(response);

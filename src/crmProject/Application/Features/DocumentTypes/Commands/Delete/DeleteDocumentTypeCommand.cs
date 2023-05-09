@@ -9,7 +9,7 @@ namespace Application.Features.DocumentTypes.Commands.Delete;
 
 public class DeleteDocumentTypeCommand : IRequest<DeletedDocumentTypeResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteDocumentTypeCommandHandler : IRequestHandler<DeleteDocumentTypeCommand, DeletedDocumentTypeResponse>
     {

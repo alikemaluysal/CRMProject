@@ -22,7 +22,7 @@ public class StatusTypeBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task StatusTypeIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task StatusTypeIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         StatusType? statusType = await _statusTypeRepository.GetAsync(
             predicate: st => st.Id == id,

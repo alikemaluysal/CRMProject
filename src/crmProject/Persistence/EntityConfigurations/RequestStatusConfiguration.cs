@@ -16,6 +16,15 @@ public class RequestStatusConfiguration : IEntityTypeConfiguration<RequestStatus
         builder.Property(rs => rs.UpdatedDate).HasColumnName("UpdatedDate");
         builder.Property(rs => rs.DeletedDate).HasColumnName("DeletedDate");
 
+
         builder.HasQueryFilter(rs => !rs.DeletedDate.HasValue);
+
+        RequestStatus[] requestStatusSeeds = new RequestStatus[]
+        {
+                new() {Id = 1, Name = "Open" },
+                new() {Id = 2, Name = "In Progress" },
+                new() {Id = 3, Name = "Resolved" },
+                new() {Id = 4, Name = "Closed" }
+        };
     }
 }

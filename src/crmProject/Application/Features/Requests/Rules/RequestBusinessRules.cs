@@ -22,7 +22,7 @@ public class RequestBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task RequestIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task RequestIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         Request? request = await _requestRepository.GetAsync(
             predicate: r => r.Id == id,

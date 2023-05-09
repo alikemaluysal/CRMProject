@@ -4,7 +4,7 @@ namespace Application.Features.Sales.Queries.GetById;
 
 public class GetByIdSaleResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int RequestId { get; set; }
     public int EmployeeUserId { get; set; }
     public DateTime SaleDate { get; set; }

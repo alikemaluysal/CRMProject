@@ -30,7 +30,7 @@ public class DocumentTypesController : BaseController
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete([FromRoute] Guid id)
+    public async Task<IActionResult> Delete([FromRoute] int id)
     {
         DeletedDocumentTypeResponse response = await Mediator.Send(new DeleteDocumentTypeCommand { Id = id });
 
@@ -38,7 +38,7 @@ public class DocumentTypesController : BaseController
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetById([FromRoute] Guid id)
+    public async Task<IActionResult> GetById([FromRoute] int id)
     {
         GetByIdDocumentTypeResponse response = await Mediator.Send(new GetByIdDocumentTypeQuery { Id = id });
         return Ok(response);

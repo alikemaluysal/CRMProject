@@ -8,7 +8,7 @@ namespace Application.Features.OfferStatuses.Commands.Update;
 
 public class UpdateOfferStatusCommand : IRequest<UpdatedOfferStatusResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
 
     public class UpdateOfferStatusCommandHandler : IRequestHandler<UpdateOfferStatusCommand, UpdatedOfferStatusResponse>

@@ -8,7 +8,7 @@ namespace Application.Features.Departments.Queries.GetById;
 
 public class GetByIdDepartmentQuery : IRequest<GetByIdDepartmentResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdDepartmentQueryHandler : IRequestHandler<GetByIdDepartmentQuery, GetByIdDepartmentResponse>
     {

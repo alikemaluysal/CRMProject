@@ -5,7 +5,7 @@ using Persistence.Contexts;
 
 namespace Persistence.Repositories;
 
-public class RegionRepository : EfRepositoryBase<Region, Guid, BaseDbContext>, IRegionRepository
+public class RegionRepository : EfRepositoryBase<Region, int, BaseDbContext>, IRegionRepository
 {
     public RegionRepository(BaseDbContext context) : base(context)
     {

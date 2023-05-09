@@ -17,5 +17,12 @@ public class GenderConfiguration : IEntityTypeConfiguration<Gender>
         builder.Property(g => g.DeletedDate).HasColumnName("DeletedDate");
 
         builder.HasQueryFilter(g => !g.DeletedDate.HasValue);
+
+        Gender[] gendersSeeds = new Gender[] {
+                new() {Id = 1, Name = "Male" },
+                new() {Id = 2, Name = "Female"}
+            };
+
+        builder.HasData(gendersSeeds);
     }
 }

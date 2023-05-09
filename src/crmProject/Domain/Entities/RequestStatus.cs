@@ -2,7 +2,7 @@
 
 namespace Domain.Entities;
 
-public class RequestStatus : Entity<Guid>
+public class RequestStatus : Entity<int>
 {
     public string Name { get; set; }
 }

@@ -22,7 +22,7 @@ public class EmployeeBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task EmployeeIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task EmployeeIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         Employee? employee = await _employeeRepository.GetAsync(
             predicate: e => e.Id == id,

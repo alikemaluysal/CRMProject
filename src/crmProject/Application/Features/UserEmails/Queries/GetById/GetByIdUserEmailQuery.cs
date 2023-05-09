@@ -8,7 +8,7 @@ namespace Application.Features.UserEmails.Queries.GetById;
 
 public class GetByIdUserEmailQuery : IRequest<GetByIdUserEmailResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdUserEmailQueryHandler : IRequestHandler<GetByIdUserEmailQuery, GetByIdUserEmailResponse>
     {

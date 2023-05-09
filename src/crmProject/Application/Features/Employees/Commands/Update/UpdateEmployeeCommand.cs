@@ -8,7 +8,7 @@ namespace Application.Features.Employees.Commands.Update;
 
 public class UpdateEmployeeCommand : IRequest<UpdatedEmployeeResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int UserId { get; set; }
     public string? IdentityNumber { get; set; }
     public int? GenderId { get; set; }

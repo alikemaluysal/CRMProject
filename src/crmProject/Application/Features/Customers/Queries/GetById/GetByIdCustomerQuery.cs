@@ -8,7 +8,7 @@ namespace Application.Features.Customers.Queries.GetById;
 
 public class GetByIdCustomerQuery : IRequest<GetByIdCustomerResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdCustomerQueryHandler : IRequestHandler<GetByIdCustomerQuery, GetByIdCustomerResponse>
     {

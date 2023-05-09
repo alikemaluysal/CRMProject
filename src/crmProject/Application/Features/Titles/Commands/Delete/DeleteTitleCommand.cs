@@ -9,7 +9,7 @@ namespace Application.Features.Titles.Commands.Delete;
 
 public class DeleteTitleCommand : IRequest<DeletedTitleResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteTitleCommandHandler : IRequestHandler<DeleteTitleCommand, DeletedTitleResponse>
     {

@@ -4,7 +4,7 @@ namespace Application.Features.TaskEntities.Commands.Create;
 
 public class CreatedTaskEntityResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int RequestId { get; set; }
     public int EmployeeUserId { get; set; }
     public DateTime TaskStartDate { get; set; }

@@ -22,7 +22,7 @@ public class RegionBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task RegionIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task RegionIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         Region? region = await _regionRepository.GetAsync(
             predicate: r => r.Id == id,

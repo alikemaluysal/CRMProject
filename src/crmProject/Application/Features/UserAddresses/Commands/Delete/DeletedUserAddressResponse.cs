@@ -4,5 +4,5 @@ namespace Application.Features.UserAddresses.Commands.Delete;
 
 public class DeletedUserAddressResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 }

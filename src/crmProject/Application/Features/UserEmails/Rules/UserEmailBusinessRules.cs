@@ -22,7 +22,7 @@ public class UserEmailBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task UserEmailIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task UserEmailIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         UserEmail? userEmail = await _userEmailRepository.GetAsync(
             predicate: ue => ue.Id == id,

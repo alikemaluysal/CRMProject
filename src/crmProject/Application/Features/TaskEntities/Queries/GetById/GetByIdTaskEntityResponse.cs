@@ -4,7 +4,7 @@ namespace Application.Features.TaskEntities.Queries.GetById;
 
 public class GetByIdTaskEntityResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int RequestId { get; set; }
     public int EmployeeUserId { get; set; }
     public DateTime TaskStartDate { get; set; }

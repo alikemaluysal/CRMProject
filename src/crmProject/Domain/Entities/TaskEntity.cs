@@ -1,8 +1,9 @@
 ﻿using Core.Persistence.Repositories;
+using Core.Security.Entities;
 
 namespace Domain.Entities;
 
-public class TaskEntity : Entity<Guid>
+public class TaskEntity : Entity<int>
 {
     public int RequestId { get; set; }
     public int EmployeeUserId { get; set; }
@@ -13,9 +14,9 @@ public class TaskEntity : Entity<Guid>
 
     #region Navigation Properties
 
-    public virtual Request? RequestFK { get; set; }
-    public virtual Employee? EmployeeFK { get; set; }
-    public virtual TaskStatus? TaskStatusFK { get; set; }
+    public virtual Request? Request { get; set; }
+    public virtual User? EmployeeUser { get; set; }
+    public virtual TaskStatus? TaskStatus { get; set; }
 
     #endregion
 }

@@ -22,7 +22,7 @@ public class OfferBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task OfferIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task OfferIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         Offer? offer = await _offerRepository.GetAsync(
             predicate: o => o.Id == id,

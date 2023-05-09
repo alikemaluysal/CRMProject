@@ -8,7 +8,7 @@ namespace Application.Features.TaskEntities.Queries.GetById;
 
 public class GetByIdTaskEntityQuery : IRequest<GetByIdTaskEntityResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdTaskEntityQueryHandler : IRequestHandler<GetByIdTaskEntityQuery, GetByIdTaskEntityResponse>
     {

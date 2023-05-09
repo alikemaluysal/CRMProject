@@ -6,7 +6,7 @@ using TaskStatus = Domain.Entities.TaskStatus;
 
 namespace Persistence.Repositories;
 
-public class TaskStatusRepository : EfRepositoryBase<TaskStatus, Guid, BaseDbContext>, ITaskStatusRepository
+public class TaskStatusRepository : EfRepositoryBase<TaskStatus, int, BaseDbContext>, ITaskStatusRepository
 {
     public TaskStatusRepository(BaseDbContext context) : base(context)
     {

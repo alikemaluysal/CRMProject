@@ -5,7 +5,7 @@ using Persistence.Contexts;
 
 namespace Persistence.Repositories;
 
-public class UserEmailRepository : EfRepositoryBase<UserEmail, Guid, BaseDbContext>, IUserEmailRepository
+public class UserEmailRepository : EfRepositoryBase<UserEmail, int, BaseDbContext>, IUserEmailRepository
 {
     public UserEmailRepository(BaseDbContext context) : base(context)
     {

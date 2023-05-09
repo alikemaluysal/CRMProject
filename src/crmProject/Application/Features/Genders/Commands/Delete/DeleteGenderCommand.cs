@@ -9,7 +9,7 @@ namespace Application.Features.Genders.Commands.Delete;
 
 public class DeleteGenderCommand : IRequest<DeletedGenderResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteGenderCommandHandler : IRequestHandler<DeleteGenderCommand, DeletedGenderResponse>
     {

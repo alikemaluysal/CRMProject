@@ -8,7 +8,7 @@ namespace Application.Features.Sales.Commands.Update;
 
 public class UpdateSaleCommand : IRequest<UpdatedSaleResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int RequestId { get; set; }
     public int EmployeeUserId { get; set; }
     public DateTime SaleDate { get; set; }

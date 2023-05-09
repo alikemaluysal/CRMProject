@@ -8,7 +8,7 @@ namespace Application.Features.Departments.Commands.Update;
 
 public class UpdateDepartmentCommand : IRequest<UpdatedDepartmentResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string? Name { get; set; }
 
     public class UpdateDepartmentCommandHandler : IRequestHandler<UpdateDepartmentCommand, UpdatedDepartmentResponse>

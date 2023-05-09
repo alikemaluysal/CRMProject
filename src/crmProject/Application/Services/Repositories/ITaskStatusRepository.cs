@@ -4,6 +4,6 @@ using TaskStatus = Domain.Entities.TaskStatus;
 
 namespace Application.Services.Repositories;
 
-public interface ITaskStatusRepository : IAsyncRepository<TaskStatus, Guid>, IRepository<TaskStatus, Guid>
+public interface ITaskStatusRepository : IAsyncRepository<TaskStatus, int>, IRepository<TaskStatus, int>
 {
 }

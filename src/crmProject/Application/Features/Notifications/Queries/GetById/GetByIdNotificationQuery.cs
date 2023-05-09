@@ -8,7 +8,7 @@ namespace Application.Features.Notifications.Queries.GetById;
 
 public class GetByIdNotificationQuery : IRequest<GetByIdNotificationResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdNotificationQueryHandler : IRequestHandler<GetByIdNotificationQuery, GetByIdNotificationResponse>
     {

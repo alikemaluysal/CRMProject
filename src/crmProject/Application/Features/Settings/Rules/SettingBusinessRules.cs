@@ -22,7 +22,7 @@ public class SettingBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task SettingIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task SettingIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         Setting? setting = await _settingRepository.GetAsync(
             predicate: s => s.Id == id,

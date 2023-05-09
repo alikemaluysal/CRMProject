@@ -22,7 +22,7 @@ public class DepartmentBusinessRules : BaseBusinessRules
         return Task.CompletedTask;
     }
 
-    public async Task DepartmentIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
+    public async Task DepartmentIdShouldExistWhenSelected(int id, CancellationToken cancellationToken)
     {
         Department? department = await _departmentRepository.GetAsync(
             predicate: d => d.Id == id,

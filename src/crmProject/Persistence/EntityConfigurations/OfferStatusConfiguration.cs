@@ -17,5 +17,15 @@ public class OfferStatusConfiguration : IEntityTypeConfiguration<OfferStatus>
         builder.Property(os => os.DeletedDate).HasColumnName("DeletedDate");
 
         builder.HasQueryFilter(os => !os.DeletedDate.HasValue);
+
+        OfferStatus[] offerStatusSeeds = new OfferStatus[]
+        {
+                new() {Id = 1, Name = "Open" },
+                new() {Id = 2, Name = "In Progress" },
+                new() {Id = 3, Name = "Resolved" },
+                new() {Id = 4, Name = "Closed" }
+        };
+
+        builder.HasData(offerStatusSeeds);
     }
 }

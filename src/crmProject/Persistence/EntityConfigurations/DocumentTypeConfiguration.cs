@@ -17,5 +17,15 @@ public class DocumentTypeConfiguration : IEntityTypeConfiguration<DocumentType>
         builder.Property(dt => dt.DeletedDate).HasColumnName("DeletedDate");
 
         builder.HasQueryFilter(dt => !dt.DeletedDate.HasValue);
+
+        DocumentType[] documentTypeSeeds = new DocumentType[]
+        {
+                new() {Id = 1, Name = "Word" },
+                new() {Id = 2, Name = "PDF" },
+                new() {Id = 3, Name = "Video" },
+                new() {Id = 4, Name = "Audio" }
+        };
+
+        builder.HasData(documentTypeSeeds);
     }
 }

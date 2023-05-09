@@ -8,7 +8,7 @@ namespace Application.Features.Genders.Commands.Update;
 
 public class UpdateGenderCommand : IRequest<UpdatedGenderResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
 
     public class UpdateGenderCommandHandler : IRequestHandler<UpdateGenderCommand, UpdatedGenderResponse>

@@ -5,7 +5,7 @@ namespace Application.Features.Customers.Commands.Update;
 
 public class UpdatedCustomerResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public int UserId { get; set; }
     public string? IdentityNumber { get; set; }
     public int? GenderId { get; set; }

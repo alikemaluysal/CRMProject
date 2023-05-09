@@ -9,7 +9,7 @@ namespace Application.Features.Settings.Commands.Delete;
 
 public class DeleteSettingCommand : IRequest<DeletedSettingResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteSettingCommandHandler : IRequestHandler<DeleteSettingCommand, DeletedSettingResponse>
     {

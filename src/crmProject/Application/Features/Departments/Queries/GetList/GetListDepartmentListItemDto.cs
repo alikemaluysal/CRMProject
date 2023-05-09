@@ -4,6 +4,6 @@ namespace Application.Features.Departments.Queries.GetList;
 
 public class GetListDepartmentListItemDto : IDto
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string? Name { get; set; }
 }

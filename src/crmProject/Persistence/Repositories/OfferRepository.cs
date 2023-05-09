@@ -5,7 +5,7 @@ using Persistence.Contexts;
 
 namespace Persistence.Repositories;
 
-public class OfferRepository : EfRepositoryBase<Offer, Guid, BaseDbContext>, IOfferRepository
+public class OfferRepository : EfRepositoryBase<Offer, int, BaseDbContext>, IOfferRepository
 {
     public OfferRepository(BaseDbContext context) : base(context)
     {

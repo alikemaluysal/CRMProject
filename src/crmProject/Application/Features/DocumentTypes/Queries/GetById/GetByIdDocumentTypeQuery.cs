@@ -8,7 +8,7 @@ namespace Application.Features.DocumentTypes.Queries.GetById;
 
 public class GetByIdDocumentTypeQuery : IRequest<GetByIdDocumentTypeResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdDocumentTypeQueryHandler : IRequestHandler<GetByIdDocumentTypeQuery, GetByIdDocumentTypeResponse>
     {

@@ -9,7 +9,7 @@ namespace Application.Features.UserPhones.Commands.Delete;
 
 public class DeleteUserPhoneCommand : IRequest<DeletedUserPhoneResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class DeleteUserPhoneCommandHandler : IRequestHandler<DeleteUserPhoneCommand, DeletedUserPhoneResponse>
     {

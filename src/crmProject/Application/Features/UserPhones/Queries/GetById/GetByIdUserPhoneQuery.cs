@@ -8,7 +8,7 @@ namespace Application.Features.UserPhones.Queries.GetById;
 
 public class GetByIdUserPhoneQuery : IRequest<GetByIdUserPhoneResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdUserPhoneQueryHandler : IRequestHandler<GetByIdUserPhoneQuery, GetByIdUserPhoneResponse>
     {

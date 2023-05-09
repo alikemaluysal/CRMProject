@@ -4,6 +4,6 @@ namespace Application.Features.Departments.Commands.Create;
 
 public class CreatedDepartmentResponse : IResponse
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
     public string? Name { get; set; }
 }

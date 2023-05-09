@@ -8,7 +8,7 @@ namespace Application.Features.Titles.Queries.GetById;
 
 public class GetByIdTitleQuery : IRequest<GetByIdTitleResponse>
 {
-    public Guid Id { get; set; }
+    public int Id { get; set; }
 
     public class GetByIdTitleQueryHandler : IRequestHandler<GetByIdTitleQuery, GetByIdTitleResponse>
     {
