@@ -29,9 +29,9 @@ public class UpdateOfferStatusCommand : IRequest<UpdatedOfferStatusResponse>
         {
             OfferStatus? offerStatus = await _offerStatusRepository.GetAsync(os => os.Id == request.Id, cancellationToken: cancellationToken);
             await _offerStatusBusinessRules.OfferStatusShouldExistWhenSelected(offerStatus);
+            await _offerStatusBusinessRules.OfferStatusNameShouldNotExistWhenUpdating(offerStatus);
             offerStatus = _mapper.Map(request, offerStatus);
 
-            await _offerStatusBusinessRules.OfferStatusNameShouldNotExistWhenUpdating(offerStatus);
 
 
             await _offerStatusRepository.UpdateAsync(offerStatus);

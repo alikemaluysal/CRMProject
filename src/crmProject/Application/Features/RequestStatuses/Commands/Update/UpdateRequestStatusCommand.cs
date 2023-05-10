@@ -29,9 +29,9 @@ public class UpdateRequestStatusCommand : IRequest<UpdatedRequestStatusResponse>
         {
             RequestStatus? requestStatus = await _requestStatusRepository.GetAsync(rs => rs.Id == request.Id, cancellationToken: cancellationToken);
             await _requestStatusBusinessRules.RequestStatusShouldExistWhenSelected(requestStatus);
+            await _requestStatusBusinessRules.RequestStatusNameShouldNotExistWhenUpdating(requestStatus);
             requestStatus = _mapper.Map(request, requestStatus);
 
-            await _requestStatusBusinessRules.RequestStatusNameShouldNotExistWhenUpdating(requestStatus);
 
 
             await _requestStatusRepository.UpdateAsync(requestStatus);

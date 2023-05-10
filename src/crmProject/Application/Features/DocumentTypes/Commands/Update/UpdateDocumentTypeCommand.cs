@@ -29,10 +29,9 @@ public class UpdateDocumentTypeCommand : IRequest<UpdatedDocumentTypeResponse>
         {
             DocumentType? documentType = await _documentTypeRepository.GetAsync(dt => dt.Id == request.Id, cancellationToken: cancellationToken);
             await _documentTypeBusinessRules.DocumentTypeShouldExistWhenSelected(documentType);
+            await _documentTypeBusinessRules.DocumentTypeNameShouldNotExistWhenUpdating(documentType);
 
             documentType = _mapper.Map(request, documentType);
-
-            await _documentTypeBusinessRules.DocumentTypeNameShouldNotExistWhenUpdating(documentType);
 
             await _documentTypeRepository.UpdateAsync(documentType);
 

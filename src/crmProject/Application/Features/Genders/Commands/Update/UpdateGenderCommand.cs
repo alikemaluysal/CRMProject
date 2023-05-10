@@ -29,9 +29,9 @@ public class UpdateGenderCommand : IRequest<UpdatedGenderResponse>
         {
             Gender? gender = await _genderRepository.GetAsync(g => g.Id == request.Id, cancellationToken: cancellationToken);
             await _genderBusinessRules.GenderShouldExistWhenSelected(gender);
+            await _genderBusinessRules.GenderNameShouldNotExistWhenUpdating(gender);
             gender = _mapper.Map(request, gender);
 
-            await _genderBusinessRules.GenderNameShouldNotExistWhenUpdating(gender);
 
 
             await _genderRepository.UpdateAsync(gender);

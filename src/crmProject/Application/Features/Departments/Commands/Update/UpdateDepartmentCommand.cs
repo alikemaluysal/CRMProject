@@ -29,9 +29,9 @@ public class UpdateDepartmentCommand : IRequest<UpdatedDepartmentResponse>
         {
             Department? department = await _departmentRepository.GetAsync(d => d.Id == request.Id, cancellationToken: cancellationToken);
             await _departmentBusinessRules.DepartmentShouldExistWhenSelected(department);
+            await _departmentRepository.UpdateAsync(department);
             department = _mapper.Map(request, department);
 
-            await _departmentRepository.UpdateAsync(department);
 
             UpdatedDepartmentResponse response = _mapper.Map<UpdatedDepartmentResponse>(department);
             return response;
