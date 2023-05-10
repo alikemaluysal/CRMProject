@@ -26,6 +26,8 @@ public class CreateDocumentTypeCommand : IRequest<CreatedDocumentTypeResponse>
 
         public async Task<CreatedDocumentTypeResponse> Handle(CreateDocumentTypeCommand request, CancellationToken cancellationToken)
         {
+
+            await _documentTypeBusinessRules.DocumentTypeNameShouldNotExistWhenCreating(request.Name);
             DocumentType documentType = _mapper.Map<DocumentType>(request);
 
             await _documentTypeRepository.AddAsync(documentType);

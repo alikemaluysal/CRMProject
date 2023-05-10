@@ -31,6 +31,9 @@ public class UpdateOfferStatusCommand : IRequest<UpdatedOfferStatusResponse>
             await _offerStatusBusinessRules.OfferStatusShouldExistWhenSelected(offerStatus);
             offerStatus = _mapper.Map(request, offerStatus);
 
+            await _offerStatusBusinessRules.OfferStatusNameShouldNotExistWhenUpdating(offerStatus);
+
+
             await _offerStatusRepository.UpdateAsync(offerStatus);
 
             UpdatedOfferStatusResponse response = _mapper.Map<UpdatedOfferStatusResponse>(offerStatus);

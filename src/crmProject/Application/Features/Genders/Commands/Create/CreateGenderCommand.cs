@@ -1,3 +1,4 @@
+using Application.Features.DocumentTypes.Rules;
 using Application.Features.Genders.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
@@ -26,6 +27,8 @@ public class CreateGenderCommand : IRequest<CreatedGenderResponse>
 
         public async Task<CreatedGenderResponse> Handle(CreateGenderCommand request, CancellationToken cancellationToken)
         {
+            await _genderBusinessRules.GenderNameShouldNotExistWhenCreating(request.Name);
+
             Gender gender = _mapper.Map<Gender>(request);
 
             await _genderRepository.AddAsync(gender);

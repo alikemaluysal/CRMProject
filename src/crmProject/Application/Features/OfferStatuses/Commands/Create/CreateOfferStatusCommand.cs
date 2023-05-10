@@ -26,6 +26,11 @@ public class CreateOfferStatusCommand : IRequest<CreatedOfferStatusResponse>
 
         public async Task<CreatedOfferStatusResponse> Handle(CreateOfferStatusCommand request, CancellationToken cancellationToken)
         {
+
+            await _offerStatusBusinessRules.OfferStatusNameShouldNotExistWhenCreating(request.Name);
+
+
+
             OfferStatus offerStatus = _mapper.Map<OfferStatus>(request);
 
             await _offerStatusRepository.AddAsync(offerStatus);
