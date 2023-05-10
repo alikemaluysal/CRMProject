@@ -33,14 +33,14 @@ public class DocumentTypeBusinessRules : BaseBusinessRules
         await DocumentTypeShouldExistWhenSelected(documentType);
     }
 
-    public async Task DocumentTypeNameCanNotBeDuplicatedWhenInserted(string name)
+    public async Task DocumentTypeNameShouldNotExistWhenCreating(string name)
     {
         DocumentType? result = await _documentTypeRepository.GetAsync(x => x.Name.ToLower() == name.ToLower());
         if (result != null)
             throw new BusinessException(DocumentTypesBusinessMessages.DocumentTypeNameExists);
     }
 
-    public async Task DocumentTypeNameCanNotBeDuplicatedWhenUpdated(DocumentType documentType)
+    public async Task DocumentTypeNameShouldNotExistWhenUpdating(DocumentType documentType)
     {
         DocumentType? result = await _documentTypeRepository.GetAsync(x => x.Id != documentType.Id && x.Name.ToLower() == documentType.Name.ToLower());
         if (result != null)

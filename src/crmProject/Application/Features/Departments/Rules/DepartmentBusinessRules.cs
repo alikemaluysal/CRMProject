@@ -33,14 +33,14 @@ public class DepartmentBusinessRules : BaseBusinessRules
         await DepartmentShouldExistWhenSelected(department);
     }
 
-    public async Task DepartmentNameCanNotBeDuplicatedWhenInserted(string name)
+    public async Task DepartmentNameShouldNotExistWhenCreating(string name)
     {
         Department? result = await _departmentRepository.GetAsync(x => x.Name.ToLower() == name.ToLower());
         if (result != null)
             throw new BusinessException(DepartmentsBusinessMessages.DepartmentNameExists);
     }
 
-    public async Task DepartmentNameCanNotBeDuplicatedWhenUpdated(Department department)
+    public async Task DepartmentNameShouldNotExistWhenUpdating(Department department)
     {
         Department? result = await _departmentRepository.GetAsync(x => x.Id != department.Id && x.Name.ToLower() == department.Name.ToLower());
         if (result != null)
