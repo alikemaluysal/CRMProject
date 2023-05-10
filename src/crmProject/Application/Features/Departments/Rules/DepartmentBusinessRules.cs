@@ -1,4 +1,5 @@
 using Application.Features.Departments.Constants;
+using Application.Features.Departments.Constants;
 using Application.Services.Repositories;
 using Core.Application.Rules;
 using Core.CrossCuttingConcerns.Exceptions.Types;
@@ -30,5 +31,19 @@ public class DepartmentBusinessRules : BaseBusinessRules
             cancellationToken: cancellationToken
         );
         await DepartmentShouldExistWhenSelected(department);
+    }
+
+    public async Task DepartmentNameCanNotBeDuplicatedWhenInserted(string name)
+    {
+        Department? result = await _departmentRepository.GetAsync(x => x.Name.ToLower() == name.ToLower());
+        if (result != null)
+            throw new BusinessException(DepartmentsBusinessMessages.DepartmentNameExists);
+    }
+
+    public async Task DepartmentNameCanNotBeDuplicatedWhenUpdated(Department department)
+    {
+        Department? result = await _departmentRepository.GetAsync(x => x.Id != department.Id && x.Name.ToLower() == department.Name.ToLower());
+        if (result != null)
+            throw new BusinessException(DepartmentsBusinessMessages.DepartmentNameExists);
     }
 }
