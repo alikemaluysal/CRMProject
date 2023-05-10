@@ -31,4 +31,18 @@ public class GenderBusinessRules : BaseBusinessRules
         );
         await GenderShouldExistWhenSelected(gender);
     }
+
+    public async Task GenderNameCanNotBeDuplicatedWhenInserted(string name)
+    {
+        Gender? result = await _genderRepository.GetAsync(x => x.Name.ToLower() == name.ToLower());
+        if (result != null)
+            throw new BusinessException(GendersBusinessMessages.GenderNameExists);
+    }
+
+    public async Task GenderNameCanNotBeDuplicatedWhenUpdated(Gender gender)
+    {
+        Gender? result = await _genderRepository.GetAsync(x => x.Id != gender.Id && x.Name.ToLower() == gender.Name.ToLower());
+        if (result != null)
+            throw new BusinessException(GendersBusinessMessages.GenderNameExists);
+    }
 }
