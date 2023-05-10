@@ -29,7 +29,10 @@ public class UpdateStatusTypeCommand : IRequest<UpdatedStatusTypeResponse>
         {
             StatusType? statusType = await _statusTypeRepository.GetAsync(st => st.Id == request.Id, cancellationToken: cancellationToken);
             await _statusTypeBusinessRules.StatusTypeShouldExistWhenSelected(statusType);
+            await _statusTypeBusinessRules.StatusTypeNameShouldNotExistWhenUpdating(statusType);
+
             statusType = _mapper.Map(request, statusType);
+
 
             await _statusTypeRepository.UpdateAsync(statusType);
 

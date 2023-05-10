@@ -26,6 +26,8 @@ public class CreateStatusTypeCommand : IRequest<CreatedStatusTypeResponse>
 
         public async Task<CreatedStatusTypeResponse> Handle(CreateStatusTypeCommand request, CancellationToken cancellationToken)
         {
+
+            await _statusTypeBusinessRules.StatusTypeNameShouldNotExistWhenCreating(request.Name);
             StatusType statusType = _mapper.Map<StatusType>(request);
 
             await _statusTypeRepository.AddAsync(statusType);
