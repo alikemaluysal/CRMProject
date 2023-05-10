@@ -31,4 +31,18 @@ public class OfferStatusBusinessRules : BaseBusinessRules
         );
         await OfferStatusShouldExistWhenSelected(offerStatus);
     }
+
+    public async Task OfferStatusNameCanNotBeDuplicatedWhenInserted(string name)
+    {
+        OfferStatus? result = await _offerStatusRepository.GetAsync(x => x.Name.ToLower() == name.ToLower());
+        if (result != null)
+            throw new BusinessException(OfferStatusBusinessMessages.OfferStatusNameExists);
+    }
+
+    public async Task OfferStatusNameCanNotBeDuplicatedWhenUpdated(OfferStatus offerStatus)
+    {
+        OfferStatus? result = await _offerStatusRepository.GetAsync(x => x.Id != offerStatus.Id && x.Name.ToLower() == offerStatus.Name.ToLower());
+        if (result != null)
+            throw new BusinessException(OfferStatusBusinessMessages.OfferStatusNameExists);
+    }
 }
