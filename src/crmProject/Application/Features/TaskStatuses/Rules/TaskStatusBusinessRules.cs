@@ -1,3 +1,4 @@
+using Application.Features.TaskStatuss.Constants;
 using Application.Features.TaskStatuses.Constants;
 using Application.Services.Repositories;
 using Core.Application.Rules;
@@ -31,5 +32,19 @@ public class TaskStatusBusinessRules : BaseBusinessRules
             cancellationToken: cancellationToken
         );
         await TaskStatusShouldExistWhenSelected(taskStatus);
+    }
+
+    public async Task TaskStatusNameShouldNotExistWhenCreating(string name)
+    {
+        TaskStatus? result = await _taskStatusRepository.GetAsync(x => x.Name.ToLower() == name.ToLower());
+        if (result != null)
+            throw new BusinessException(TaskStatusBusinessMessages.TaskStatusNameExists);
+    }
+
+    public async Task TaskStatusNameShouldNotExistWhenUpdating(TaskStatus taskStatus)
+    {
+        TaskStatus? result = await _taskStatusRepository.GetAsync(x => x.Id != taskStatus.Id && x.Name.ToLower() == taskStatus.Name.ToLower());
+        if (result != null)
+            throw new BusinessException(TaskStatusBusinessMessages.TaskStatusNameExists);
     }
 }

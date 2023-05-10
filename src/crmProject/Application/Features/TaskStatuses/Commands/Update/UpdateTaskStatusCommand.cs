@@ -30,6 +30,8 @@ public class UpdateTaskStatusCommand : IRequest<UpdatedTaskStatusResponse>
         {
             TaskStatus? taskStatus = await _taskStatusRepository.GetAsync(ts => ts.Id == request.Id, cancellationToken: cancellationToken);
             await _taskStatusBusinessRules.TaskStatusShouldExistWhenSelected(taskStatus);
+            await _taskStatusBusinessRules.TaskStatusNameShouldNotExistWhenUpdating(taskStatus);
+
             taskStatus = _mapper.Map(request, taskStatus);
 
             await _taskStatusRepository.UpdateAsync(taskStatus);

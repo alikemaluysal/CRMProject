@@ -27,6 +27,7 @@ public class CreateTaskStatusCommand : IRequest<CreatedTaskStatusResponse>
 
         public async Task<CreatedTaskStatusResponse> Handle(CreateTaskStatusCommand request, CancellationToken cancellationToken)
         {
+            await _taskStatusBusinessRules.TaskStatusNameShouldNotExistWhenCreating(request.Name);
             TaskStatus taskStatus = _mapper.Map<TaskStatus>(request);
 
             await _taskStatusRepository.AddAsync(taskStatus);
