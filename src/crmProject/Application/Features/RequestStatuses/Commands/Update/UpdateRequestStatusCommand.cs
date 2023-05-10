@@ -31,6 +31,9 @@ public class UpdateRequestStatusCommand : IRequest<UpdatedRequestStatusResponse>
             await _requestStatusBusinessRules.RequestStatusShouldExistWhenSelected(requestStatus);
             requestStatus = _mapper.Map(request, requestStatus);
 
+            await _requestStatusBusinessRules.RequestStatusNameShouldNotExistWhenUpdating(requestStatus);
+
+
             await _requestStatusRepository.UpdateAsync(requestStatus);
 
             UpdatedRequestStatusResponse response = _mapper.Map<UpdatedRequestStatusResponse>(requestStatus);

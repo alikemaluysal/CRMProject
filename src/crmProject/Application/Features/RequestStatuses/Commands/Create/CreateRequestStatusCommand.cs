@@ -1,3 +1,4 @@
+using Application.Features.OfferStatuses.Rules;
 using Application.Features.RequestStatuses.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
@@ -26,6 +27,10 @@ public class CreateRequestStatusCommand : IRequest<CreatedRequestStatusResponse>
 
         public async Task<CreatedRequestStatusResponse> Handle(CreateRequestStatusCommand request, CancellationToken cancellationToken)
         {
+
+            await _requestStatusBusinessRules.RequestStatusNameShouldNotExistWhenCreating(request.Name);
+
+
             RequestStatus requestStatus = _mapper.Map<RequestStatus>(request);
 
             await _requestStatusRepository.AddAsync(requestStatus);
